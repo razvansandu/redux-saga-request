@@ -2,7 +2,6 @@
   "name": "redux-saga-request",
   "version": "1.0.0",
   "description": "Helper functions for easier development of API requests using redux and redux-saga",
-  "module": "src/index.js",
   "main": "lib/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

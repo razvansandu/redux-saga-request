@@ -1,31 +1,8 @@
 {
   "presets": [
-    [
-      "env",
-      {
-        "targets": {
-          "browsers": [
-            "ie >= 11"
-          ]
-        },
-        "modules": false,
-        "loose": true
-      }
-    ]
+    "env"
   ],
   "plugins": [
     "transform-object-rest-spread"
-  ],
-  "env": {
-    "commonjs": {
-      "presets": [
-        [
-          "env",
-          {
-            "loose": true
-          }
-        ]
-      ]
-    }
-  }
+  ]
 }
