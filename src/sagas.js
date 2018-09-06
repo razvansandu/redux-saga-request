@@ -14,11 +14,11 @@ function requestSaga(requestFunction, routine, requestMapper, responseMapper) {
 
     const key = action.payload && (action.payload.key || action.payload.id);
     try {
-      let response = yield call(requestFunction, requestMapper(action.payload));
+      const requestData = action.payload;
+      let response = yield call(requestFunction, requestMapper(requestData));
 
       response.data = responseMapper(response.data);
-
-      yield put(routine.success({key, response}));
+      yield put(routine.success({key, response, requestData}));
     } catch (error) {
       yield put(routine.failure({key, error}));
     } finally {
